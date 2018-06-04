@@ -1,0 +1,93 @@
+<head>
+<script>
+<!--
+function validate()
+{
+	
+	var nm=document.rgstr.nm;
+	var nm_len=nm.value.length;
+	var eml=document.rgstr.email;
+	var phn=document.rgstr.phn;
+	var phn_len=phn.value.length;
+	var cnt=0;
+if(nm_len<8 || nm_len>16)
+	{
+		alert("user name length should be between 8 and 16");
+		cnt++;
+	}
+
+	
+
+
+if (eml.value.indexOf("@", 0) < 0)
+    {
+        alert("Please enter a valid e-mail address.");
+	cnt++;
+
+    }
+    if (eml.value.indexOf(".", 0) < 0)
+    {
+        alert("Please enter a valid e-mail address.");
+        cnt++;
+    }
+
+
+
+
+if((phn_len!=10 || isNaN(phn.value)) && phn_len!=0)
+	{
+		alert("Please enter appropriate phone number");
+		cnt++;
+	}
+	
+
+if(cnt>0)
+{
+		document.getElementById("r").reset();
+}
+
+	
+
+}
+-->
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$("document").ready(function(){
+$("p").on({
+    mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+    },
+    mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+    },
+    click: function(){
+        $(this).css("background-color", "yellow");
+    }
+});
+});
+</script>
+</head>
+<body>
+<form method=get action=registered_data name=rgstr id=r>
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table boder=1>
+<table border=1 bgcolor=#aaaaaa >
+&nbsp;
+&nbsp;
+<tr><td>Name:  <th><p><input type=text name=nm required></p>
+<tr><td>Email: <th><p><input type=email name=email required></p>
+<tr><td>Gender: <th><select name=gdr><p><option>Male</option></p><p><option>female</option></p><p><option>other</option></p>
+<tr><td>Phone:	<th><p><input type=text name=phn></p>
+<tr><td><th><input type=submit onclick=validate()>
+</table>
+</table>
+</form>
+</body>
