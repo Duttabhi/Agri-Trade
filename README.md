@@ -2,6 +2,10 @@
 
 **Objective: This project work space provides the faciltiy to exchange goods in an agricultural market.**
 
+**Important Remark**
+```This is just to demostrate that I can clone a repo and open  a Java web project on eclipse and run it.```
+
+
 Developed using Java at the back end.
 
 MySQL Database is used to store and retrieve data.
